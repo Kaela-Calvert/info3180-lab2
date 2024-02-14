@@ -1,10 +1,27 @@
 from app import app
+import datetime 
 from flask import render_template, request, redirect, url_for, flash
 
 
 ###
 # Routing for your application.
 ###
+@app.route("/profile")
+def profile():
+    """Render profile page"""
+    specific_date = datetime.datetime(2019, 2, 14)  # Example date
+
+   
+    formatted_date = format_date_joined(specific_date)
+
+    
+    context = {
+        'formatted_date': formatted_date,
+        
+    }
+
+    return render_template('profile.html', **context)
+  
 
 @app.route('/')
 def home():
@@ -45,3 +62,10 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+def format_date_joined(date):
+    now = datetime.datetime.now() # today's date 
+    date_joined = datetime.date(2019, 2, 7) # a specific date 
+    ## Format the date to return only month and year date 
+    return  date_joined.strftime("%B, %Y")

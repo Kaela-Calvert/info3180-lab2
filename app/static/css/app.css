@@ -1,3 +1,65 @@
 body {
     padding-top: 5rem;
 }
+
+.profile {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, lightgreen 70%, white 30%);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1,h2,h6{
+    color: #fff;
+}
+
+.profile img {
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile h1,
+.profile h2 {
+    margin: 5px 0;
+    color: white; /* Adjusted color to white */
+}
+
+.profile p {
+    margin: 5px 0;
+    color: grey;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat {
+    flex: 1;
+}
+
+.stat p:first-child {
+    font-weight: bold;
+}
+
+.follow-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: darkgreen;
+}
+
+

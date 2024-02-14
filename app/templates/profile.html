@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="profile">
+    <img src="{{ url_for('static', filename='thatgirl.jpg') }}" alt="My Image"/>
+    <div class="info">
+        <h1>Arian Baker </h1>
+        <h2>username: @singer50</h2>
+        <h6>Location: Jamaica</p>
+        <h6>Joined: {{formatted_date}}</p>
+    </div>
+    <p>Short Bio: I sing to express the untold, to touch hearts, and to breathe life into melodies that resonate with the soul's deepest emotions.</p>
+    <div class="stats">
+        <div class="stat">
+            <p>Posts</p>
+            <p>20</p>
+        </div>
+        <div class="stat">
+            <p>Followers</p>
+            <p>1500</p>
+        </div>
+        <div class="stat">
+            <p>Following</p>
+            <p>200</p>
+        </div>
+    </div>
+    <button class="follow-btn">Follow</button>
+</div>
+{% endblock %}
